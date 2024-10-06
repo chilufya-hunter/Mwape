@@ -11,16 +11,40 @@ body {
     color: #333;
 }
 
-/* Header and navigation */
 header {
     background-color: #f4f4f4;
     padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
+    flex-grow: 1;
 }
 
 nav ul li {
@@ -48,19 +72,47 @@ h1, h2 {
 }
 
 /* Home section */
+/* Banner / Home Section Styles */
 #home {
+    margin: ;
+    background-image: url('../images/christina-wocintechchat-com-f6wB7D_xISY-unsplash.jpg');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Creates a parallax scrolling effect */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 4rem 0;
+    color: #fff; /* White text on the banner */
+}
+
+#home h1, #home h2 {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 2.5rem; /* Adjust for larger screens */
+}
+
+#home h2 {
+    font-size: 1.5rem;
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
     border-radius: 5px;
-    margin: 1rem 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
 }
 
 /* About section */
@@ -224,19 +276,126 @@ h1, h2 {
     justify-content: space-between;
 }
 
+/* Contact Form Styling */
 #contact-form {
-    flex: 1;
-    padding-right: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+#contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contact-form button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
+}
+
 
 .working-hours {
     flex: 1;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
     background-color: #333;
-    color: white;
+    color: #fff;
+    padding: 30px 0;
     text-align: center;
-    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #007BFF;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 15px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #aaa;
 }

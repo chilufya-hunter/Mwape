@@ -1,0 +1,157 @@
+/* Mobile Responsive Styles */
+
+@media screen and (max-width: 768px) {
+    /* Header and Navigation */
+    nav {
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .logo {
+        position: static;
+        transform: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #f4f4f4;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 4rem;
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    /* Home Section */
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home h2 {
+        font-size: 1.2rem;
+    }
+
+    /* About Section */
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text, .about-image {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Skills and Projects Sections */
+    .skills-grid, .projects-grid, .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Section */
+    .contact-content {
+        flex-direction: column;
+    }
+
+    #contact-form, .working-hours {
+        width: 100%;
+        padding: 0;
+    }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #contact-form {
+        padding: 15px;
+    }
+
+    #contact-form label {
+        font-size: 14px;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+        font-size: 14px;
+    }
+
+    #contact-form button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+/* Footer Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    .social-links img {
+        width: 28px;
+        height: 28px;
+    }
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home h2 {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+
+}
+
+/* Additional adjustments for very small screens */
+@media screen and (max-width: 480px) {
+    .cta-button {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    #home h1 {
+        font-size: 1.8rem;
+    }
+
+    #home h2 {
+        font-size: 1rem;
+    }
+}
