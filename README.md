@@ -1,2 +1,2 @@
 # Mwape
-personal website
+Personal website
